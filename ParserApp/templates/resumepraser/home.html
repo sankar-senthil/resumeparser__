@@ -1,0 +1,15 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block content %}
+<div class="container">
+    <div class="jumbotron" style="margin-top: 10%;">
+        <h2>Upload Your Resume Here !</h2>
+        <br><br>
+        <form action="" method="post"enctype="multipart/form-data" class="form-group">
+            {% csrf_token %}
+            <p> {{ docform.docfile }}</p>
+            <input type="submit" class="btn btn-primary" value="submit" />
+        </form>
+    </div>
+</div>
+{% endblock content %}
